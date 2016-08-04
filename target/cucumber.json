@@ -1,0 +1,80 @@
+[
+  {
+    "id": "",
+    "description": "Kak web developer\r\nJa hochu ubeditsja\r\nchto website otobrazaetsja pravilno\r\nv brauzere Android telefona",
+    "name": "",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 859428753,
+              "status": "passed"
+            },
+            "match": {
+              "location": "checkAndroidPhoneBrowserSteps.closeBrowser()"
+            }
+          }
+        ],
+        "id": ";",
+        "before": [
+          {
+            "result": {
+              "duration": 10130975188,
+              "status": "passed"
+            },
+            "match": {
+              "location": "checkAndroidPhoneBrowserSteps.getAndroidDriver()"
+            }
+          }
+        ],
+        "description": "",
+        "name": "",
+        "keyword": "Scenario",
+        "line": 7,
+        "steps": [
+          {
+            "result": {
+              "duration": 1595456939,
+              "status": "passed"
+            },
+            "name": "user otkryvaet browser",
+            "keyword": "Given ",
+            "line": 8,
+            "match": {
+              "location": "checkAndroidPhoneBrowserSteps.getWebPage()"
+            }
+          },
+          {
+            "result": {
+              "duration": 24414667,
+              "status": "passed"
+            },
+            "name": "on proverjaet sait",
+            "keyword": "When ",
+            "line": 9,
+            "match": {
+              "location": "checkAndroidPhoneBrowserSteps.checkElement()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2154034,
+              "status": "passed"
+            },
+            "name": "website title dolzen byt Google",
+            "keyword": "Then ",
+            "line": 10,
+            "match": {
+              "location": "checkAndroidPhoneBrowserSteps.checkTitleIsCorrect()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "checkAndroidPhoneBrowser.feature"
+  }
+]
