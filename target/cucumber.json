@@ -10,7 +10,7 @@
         "after": [
           {
             "result": {
-              "duration": 859428753,
+              "duration": 1234837607,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "before": [
           {
             "result": {
-              "duration": 10130975188,
+              "duration": 39762509629,
               "status": "passed"
             },
             "match": {
@@ -37,7 +37,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1595456939,
+              "duration": 4406307863,
               "status": "passed"
             },
             "name": "user otkryvaet browser",
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 24414667,
+              "duration": 869704899,
               "status": "passed"
             },
             "name": "on proverjaet sait",
@@ -61,10 +61,10 @@
           },
           {
             "result": {
-              "duration": 2154034,
+              "duration": 3694707,
               "status": "passed"
             },
-            "name": "website title dolzen byt Google",
+            "name": "website title dolzen byt pravilnym",
             "keyword": "Then ",
             "line": 10,
             "match": {

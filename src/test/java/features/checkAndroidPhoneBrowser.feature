@@ -7,4 +7,4 @@ Feature:
   Scenario:
     Given user otkryvaet browser
     When on proverjaet sait
-    Then website title dolzen byt Google
+    Then website title dolzen byt pravilnym

@@ -7,7 +7,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 10130975188,
+  "duration": 39762509629,
   "status": "passed"
 });
 formatter.scenario({
@@ -29,7 +29,7 @@ formatter.step({
   "line": 9
 });
 formatter.step({
-  "name": "website title dolzen byt Google",
+  "name": "website title dolzen byt pravilnym",
   "keyword": "Then ",
   "line": 10
 });
@@ -37,25 +37,25 @@ formatter.match({
   "location": "checkAndroidPhoneBrowserSteps.getWebPage()"
 });
 formatter.result({
-  "duration": 1595456939,
+  "duration": 4406307863,
   "status": "passed"
 });
 formatter.match({
   "location": "checkAndroidPhoneBrowserSteps.checkElement()"
 });
 formatter.result({
-  "duration": 24414667,
+  "duration": 869704899,
   "status": "passed"
 });
 formatter.match({
   "location": "checkAndroidPhoneBrowserSteps.checkTitleIsCorrect()"
 });
 formatter.result({
-  "duration": 2154034,
+  "duration": 3694707,
   "status": "passed"
 });
 formatter.after({
-  "duration": 859428753,
+  "duration": 1234837607,
   "status": "passed"
 });
 });

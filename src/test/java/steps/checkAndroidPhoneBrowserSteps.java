@@ -89,10 +89,10 @@ public class checkAndroidPhoneBrowserSteps {
         //driver.findElement(By.name("btnG")).click();
     }
 
-    @Then("^website title dolzen byt Google$")
+    @Then("^website title dolzen byt pravilnym$")
     public void checkTitleIsCorrect(){
 
-        System.out.println("webpage title = "+ title);
+        System.out.println(" webpage title = "+ title);
 
         Assert.assertTrue(title.equalsIgnoreCase(expectedTitle));
     }
