@@ -26,8 +26,8 @@ dependencies {
 test {
     // see stuff Cucumber prints
     // send command line parameters to the JVM running the tests
-    // testLogging.showStandardStreams = true
-    // systemProperties System.getProperties()
+     testLogging.showStandardStreams = true
+     systemProperties System.getProperties()
 }
 
 task wrapper(type: Wrapper) {

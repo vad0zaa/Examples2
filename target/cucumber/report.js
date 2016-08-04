@@ -7,7 +7,7 @@ formatter.feature({
   "line": 1
 });
 formatter.before({
-  "duration": 16297735741,
+  "duration": 10078790336,
   "status": "passed"
 });
 formatter.scenario({
@@ -37,25 +37,25 @@ formatter.match({
   "location": "checkAndroidPhoneBrowserSteps.getWebPage()"
 });
 formatter.result({
-  "duration": 2459857165,
+  "duration": 1894869798,
   "status": "passed"
 });
 formatter.match({
   "location": "checkAndroidPhoneBrowserSteps.checkElement()"
 });
 formatter.result({
-  "duration": 71523679,
+  "duration": 84262249,
   "status": "passed"
 });
 formatter.match({
   "location": "checkAndroidPhoneBrowserSteps.checkTitleIsCorrect()"
 });
 formatter.result({
-  "duration": 2965860,
+  "duration": 3299487,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1143317255,
+  "duration": 995749675,
   "status": "passed"
 });
 });

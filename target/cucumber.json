@@ -10,7 +10,7 @@
         "after": [
           {
             "result": {
-              "duration": 1143317255,
+              "duration": 995749675,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "before": [
           {
             "result": {
-              "duration": 16297735741,
+              "duration": 10078790336,
               "status": "passed"
             },
             "match": {
@@ -37,7 +37,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2459857165,
+              "duration": 1894869798,
               "status": "passed"
             },
             "name": "user otkryvaet browser",
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 71523679,
+              "duration": 84262249,
               "status": "passed"
             },
             "name": "on proverjaet sait",
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 2965860,
+              "duration": 3299487,
               "status": "passed"
             },
             "name": "website title dolzen byt pravilnym",
