@@ -23,11 +23,11 @@ dependencies {
     testCompile group: 'io.appium', name: 'java-client', version: '3.0.0'
 }
 
-// see stuff Cucumber prints
-// send command line parameters to the JVM running the tests
 test {
-    testLogging.showStandardStreams = true
-    systemProperties System.getProperties()
+    // see stuff Cucumber prints
+    // send command line parameters to the JVM running the tests
+    // testLogging.showStandardStreams = true
+    // systemProperties System.getProperties()
 }
 
 task wrapper(type: Wrapper) {

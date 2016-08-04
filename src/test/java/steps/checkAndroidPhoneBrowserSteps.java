@@ -24,6 +24,7 @@ import cucumber.api.java.After;
 public class checkAndroidPhoneBrowserSteps {
 
     private WebDriver driver;
+	private String device = "Android emulator nr2";
     private String webPageToOpen = "http://www.yandex.com";
     private String expectedTitle = "Yandex";
     private String title = "";
@@ -58,7 +59,7 @@ public class checkAndroidPhoneBrowserSteps {
         //driver = new AndroidDriver(url, capabilities);
 
         // set device name
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Android emulator nr2");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 
         // Create object of  AndroidDriver class and pass url of Selenium Grid server
         driver = new AndroidDriver(new URL("http://localhost:4444/wd/hub/"), capabilities);
@@ -91,6 +92,10 @@ public class checkAndroidPhoneBrowserSteps {
 
     @Then("^website title dolzen byt pravilnym$")
     public void checkTitleIsCorrect(){
+		
+		
+	System.out.println(" device = " + device);
+	System.out.println(" tested web page = " + webPageToOpen);
 
         System.out.println(" webpage title = "+ title);
 
