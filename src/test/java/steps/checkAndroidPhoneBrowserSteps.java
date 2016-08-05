@@ -68,6 +68,7 @@ public class checkAndroidPhoneBrowserSteps {
         driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(70, TimeUnit.SECONDS);
 
+        Assert.assertTrue(driver != null);
     }
 
     @Given("^user otkryvaet browser$")
@@ -75,6 +76,8 @@ public class checkAndroidPhoneBrowserSteps {
 
         driver.get(webPageToOpen);
 
+        // will always be true :))
+        Assert.assertTrue(true);
     }
 
     @When("^on proverjaet sait$")
@@ -82,6 +85,9 @@ public class checkAndroidPhoneBrowserSteps {
 
         //get website element
         title = driver.getTitle();
+
+        // fail if did not get title element
+        Assert.assertTrue(! title.equals(""));
 
         // enter text into search window
         //driver.findElement(By.name("q")).sendKeys("fob solutions tallinn");
@@ -92,12 +98,14 @@ public class checkAndroidPhoneBrowserSteps {
 
     @Then("^website title dolzen byt pravilnym$")
     public void checkTitleIsCorrect(){
-		
-		
-	System.out.println(" device = " + device);
-	System.out.println(" tested web page = " + webPageToOpen);
 
+        System.out.println("");
+        System.out.println("-------------------------------");
+        System.out.println(" device = " + device);
+        System.out.println(" tested web page = " + webPageToOpen);
         System.out.println(" webpage title = "+ title);
+        System.out.println("-------------------------------");
+        System.out.println("");
 
         Assert.assertTrue(title.equalsIgnoreCase(expectedTitle));
     }
