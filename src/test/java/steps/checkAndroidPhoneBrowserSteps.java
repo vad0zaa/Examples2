@@ -22,9 +22,8 @@ import cucumber.api.java.After;
 
 
 public class checkAndroidPhoneBrowserSteps {
-
     private WebDriver driver;
-	private String device = "Android emulator nr2";
+    private String device = "Android emulator Nr2";
     private String webPageToOpen = "http://www.yandex.com";
     private String expectedTitle = "Yandex";
     private String title = "";
@@ -47,7 +46,7 @@ public class checkAndroidPhoneBrowserSteps {
         // we need to define platform name
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
 
-        //android avd 4.4.2 api19 , default browser
+        //android avd 4.4.4 api19 , default browser
         capabilities.setCapability(MobileCapabilityType.VERSION,"4.4.4");
 
         // for single device
@@ -61,6 +60,18 @@ public class checkAndroidPhoneBrowserSteps {
         // set device name
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 
+        System.out.println("");
+        System.out.println("-------------------------------");
+        System.out.println(" device = " + device);
+        System.out.println(" web page to test = " + webPageToOpen);
+
+        URL url = new URL("http://localhost:4444/wd/hub/");
+        System.out.println(" ...new url = " + url.toString());
+
+        System.out.println(" ...trying to get AndroidDriver ");
+        System.out.println("-------------------------------");
+        System.out.println("");
+
         // Create object of  AndroidDriver class and pass url of Selenium Grid server
         driver = new AndroidDriver(new URL("http://localhost:4444/wd/hub/"), capabilities);
 
@@ -68,7 +79,7 @@ public class checkAndroidPhoneBrowserSteps {
         driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(70, TimeUnit.SECONDS);
 
-        sleep(5000);
+        sleep(10000);
 
         Assert.assertTrue(driver != null);
     }
@@ -76,11 +87,12 @@ public class checkAndroidPhoneBrowserSteps {
     @Given("^user otkryvaet browser$")
     public void getWebPage(){
 
+        System.out.println("...open web page");
         driver.get(webPageToOpen);
 
-        sleep(5000);
+        sleep(10000);
 
-        // will always be true :))
+        // always true :))
         Assert.assertTrue(true);
     }
 
@@ -88,11 +100,13 @@ public class checkAndroidPhoneBrowserSteps {
     public void checkElement(){
 
         //get website element
+        System.out.println("...get webpage title");
         title = driver.getTitle();
+
+        sleep(2000);
 
         // fail if did not get title element
         Assert.assertTrue(! title.equals(""));
-
         // enter text into search window
         //driver.findElement(By.name("q")).sendKeys("fob solutions tallinn");
 
@@ -105,7 +119,6 @@ public class checkAndroidPhoneBrowserSteps {
 
         System.out.println("");
         System.out.println("-------------------------------");
-        System.out.println(" device = " + device);
         System.out.println(" tested web page = " + webPageToOpen);
         System.out.println(" webpage title = "+ title);
         System.out.println("-------------------------------");
@@ -117,11 +130,18 @@ public class checkAndroidPhoneBrowserSteps {
     @After
     public void closeBrowser(){
 
-        sleep(2000);
 
-        driver.quit();
+        if(driver != null) {
 
-        sleep(3000);
+            System.out.println("...close browser");
+            driver.close();
+
+            sleep(5000);
+            System.out.println("...quit session");
+            driver.quit();
+            sleep(2000);
+        }
+
     }
 
     public void sleep(int milliseconds){
@@ -132,4 +152,5 @@ public class checkAndroidPhoneBrowserSteps {
             // do nothing
         }
     }
+
 }
